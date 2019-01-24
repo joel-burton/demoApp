@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const path = require('path');
 const toDoController = require('./controllers/toDoController');
 
 // makes .env variables available on process.env.____
@@ -14,8 +15,9 @@ const PORT = 3000;
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-app.get('/', toDoController.example, (req, res) => res.status(200).send(res.locals.data));
+// app.get('/', toDoController.example, (req, res) => res.status(200).send(res.locals.data));
 
+app.use(express.static(path.resolve(__dirname, "../")));
 
 // ERROR HANDLER!
 app.use((err, req, res, next) => {
