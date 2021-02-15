@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+	width: 500px;
+	margin: 0 auto;
+}
+
+input#todoInput {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #ccc;
+	width: 440px;
+	font-size: 18px;
+	padding: 10px;
+}
+
+button#inputButton {
+	border: none;
+	background: blue;
+	color: #fff;
+	width: 50px;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.items {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.items > div {
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.items > div:last-child {
+	border-bottom: none
+}
+
+.items div button {
+	float: right;
+	font-size: 18px;
+	border: none;
+	color: #aaa;
+}
